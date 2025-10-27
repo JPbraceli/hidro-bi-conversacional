@@ -1,0 +1,33 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "backend/app/main.py",
+      "use": "@vercel/python"
+    },
+    {
+      "src": "frontend/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "backend/app/main.py"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "frontend/dist/$1"
+    }
+  ],
+  "env": {
+    "OLLAMA_HOST": "https://tu-ollama-service.com",
+    "OLLAMA_MODEL": "phi3:mini",
+    "DB_TYPE": "sqlite",
+    "DB_PATH": "/tmp/hidro_data.db",
+    "ENABLE_SSL": "true"
+  }
+}
