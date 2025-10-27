@@ -1,0 +1,67 @@
+version: '3.8'
+
+services:
+  # Base de datos PostgreSQL
+  postgres:
+    image: postgres:15
+    container_name: hidrochat-postgres
+    environment:
+      POSTGRES_DB: hidrodb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "15433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init-db.sql:/docker-entrypoint-initdb.d/init-db.sql
+    networks:
+      - hidrochat-network
+
+  # Backend FastAPI
+  backend:
+    build: ./backend
+    container_name: hidrochat-backend
+    environment:
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_USER: hdcruser
+      DB_PASSWORD: localpass
+      DB_NAME: hidrodb
+      OLLAMA_HOST: http://host.docker.internal:11434
+      OLLAMA_MODEL: llama3
+    ports:
+      - "8000:8000"
+    depends_on:
+      - postgres
+    networks:
+      - hidrochat-network
+    volumes:
+      - ./backend:/app
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+
+  # Frontend React
+  frontend:
+    build: ./frontend
+    container_name: hidrochat-frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    networks:
+      - hidrochat-network
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    command: npm run dev
+
+volumes:
+  postgres_data:
+
+networks:
+  hidrochat-network:
+    driver: bridge
+
+
+
+
+

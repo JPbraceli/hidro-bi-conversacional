@@ -1,0 +1,16 @@
+# Dependencias mínimas para evitar problemas de compilación
+fastapi
+uvicorn[standard]
+sqlalchemy
+psycopg2-binary
+pydantic
+pydantic-settings
+ollama
+sqlparse
+python-multipart
+python-dotenv
+
+
+
+
+

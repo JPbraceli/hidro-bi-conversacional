@@ -1,0 +1,98 @@
+{
+  "query": "Muéstrame los usuarios por rol",
+  "start_time": "2025-10-25T23:03:20.201935",
+  "steps": [
+    {
+      "step": "FLOW_START",
+      "timestamp": "2025-10-25T23:03:20.201959",
+      "data": {
+        "query": "Muéstrame los usuarios por rol"
+      }
+    },
+    {
+      "step": "DATABASE_STATE_INITIAL",
+      "timestamp": "2025-10-25T23:03:20.202471",
+      "data": {
+        "db_path": "hidro_data.db",
+        "db_exists": true
+      }
+    },
+    {
+      "step": "DATABASE_STATE_DETAILS",
+      "timestamp": "2025-10-25T23:03:20.203804",
+      "data": {
+        "tables": [
+          "activities",
+          "profiles",
+          "contracts",
+          "gateways",
+          "admin_users"
+        ],
+        "table_counts": {
+          "activities": 5,
+          "profiles": 5,
+          "contracts": 3,
+          "gateways": 5,
+          "admin_users": 3
+        },
+        "activities_count": 5,
+        "total_value": 2850000.0,
+        "active_activities": 5
+      }
+    },
+    {
+      "step": "EXPECTED_RESULT",
+      "timestamp": "2025-10-25T23:03:20.204621",
+      "data": {
+        "message": "No hay resultado esperado definido para esta consulta"
+      }
+    },
+    {
+      "step": "BACKEND_REQUEST_START",
+      "timestamp": "2025-10-25T23:03:20.204936",
+      "data": {
+        "url": "http://localhost:8001/api/chat",
+        "method": "POST"
+      }
+    },
+    {
+      "step": "BACKEND_REQUEST_DATA",
+      "timestamp": "2025-10-25T23:03:20.205387",
+      "data": {
+        "request_payload": {
+          "message": "Muéstrame los usuarios por rol",
+          "conversation_history": []
+        }
+      }
+    },
+    {
+      "step": "BACKEND_RESPONSE_RECEIVED",
+      "timestamp": "2025-10-25T23:03:31.382733",
+      "data": {
+        "status_code": 200,
+        "response_time_ms": 11176.955223083496,
+        "response_size_bytes": 634
+      }
+    },
+    {
+      "step": "BACKEND_RESPONSE_SUCCESS",
+      "timestamp": "2025-10-25T23:03:31.383138",
+      "data": {
+        "response_data": {
+          "response": "SELECT role, COUNT(*) FROM PROFILES GROUP BY role;\n\nExecutable SQL Query: SELECT role, COUNT(*) FROM PROFILES GROUP BY role;\nResult visualization format (e.g., in Power BI or a similar tool): A bar chart displaying the count of users for each distinct role within the profiles table would be appropriate here.\n\n**Resultados:**\nSe encontraron 5 registros.\n",
+          "suggestions": [
+            "¿Cuántos usuarios hay registrados?",
+            "Muéstrame los perfiles por rol",
+            "¿Cuáles son los usuarios más recientes?"
+          ],
+          "is_ready": true,
+          "query_summary": "Consulta de conteo de registros",
+          "conversation_id": "a5511720-3c65-4f97-97e4-f4474d740430"
+        }
+      }
+    }
+  ],
+  "status": "partial_success",
+  "verification": "no_sql_generated",
+  "end_time": "2025-10-25T23:03:31.383875"
+}

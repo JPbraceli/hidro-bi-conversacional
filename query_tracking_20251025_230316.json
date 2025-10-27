@@ -1,0 +1,100 @@
+{
+  "query": "¿Cuál es el valor total de los contratos?",
+  "start_time": "2025-10-25T23:03:06.580524",
+  "steps": [
+    {
+      "step": "FLOW_START",
+      "timestamp": "2025-10-25T23:03:06.580551",
+      "data": {
+        "query": "¿Cuál es el valor total de los contratos?"
+      }
+    },
+    {
+      "step": "DATABASE_STATE_INITIAL",
+      "timestamp": "2025-10-25T23:03:06.581173",
+      "data": {
+        "db_path": "hidro_data.db",
+        "db_exists": true
+      }
+    },
+    {
+      "step": "DATABASE_STATE_DETAILS",
+      "timestamp": "2025-10-25T23:03:06.582924",
+      "data": {
+        "tables": [
+          "activities",
+          "profiles",
+          "contracts",
+          "gateways",
+          "admin_users"
+        ],
+        "table_counts": {
+          "activities": 5,
+          "profiles": 5,
+          "contracts": 3,
+          "gateways": 5,
+          "admin_users": 3
+        },
+        "activities_count": 5,
+        "total_value": 2850000.0,
+        "active_activities": 5
+      }
+    },
+    {
+      "step": "EXPECTED_RESULT",
+      "timestamp": "2025-10-25T23:03:06.583777",
+      "data": {
+        "expected_sql": "SELECT SUM(value) FROM contracts",
+        "expected_result": 15700000.0,
+        "description": "Debería retornar $15,700,000"
+      }
+    },
+    {
+      "step": "BACKEND_REQUEST_START",
+      "timestamp": "2025-10-25T23:03:06.584184",
+      "data": {
+        "url": "http://localhost:8001/api/chat",
+        "method": "POST"
+      }
+    },
+    {
+      "step": "BACKEND_REQUEST_DATA",
+      "timestamp": "2025-10-25T23:03:06.584626",
+      "data": {
+        "request_payload": {
+          "message": "¿Cuál es el valor total de los contratos?",
+          "conversation_history": []
+        }
+      }
+    },
+    {
+      "step": "BACKEND_RESPONSE_RECEIVED",
+      "timestamp": "2025-10-25T23:03:16.810429",
+      "data": {
+        "status_code": 200,
+        "response_time_ms": 10225.345849990845,
+        "response_size_bytes": 561
+      }
+    },
+    {
+      "step": "BACKEND_RESPONSE_SUCCESS",
+      "timestamp": "2025-10-25T23:03:16.810844",
+      "data": {
+        "response_data": {
+          "response": "SELECT SUM(value) FROM contracts;\n\n```sql\n-- Query to calculate the sum of 'value' from all entries in 'contracts'. This will provide us with the total value.\n\nSELECT SUM(value) AS TotalValueFromContracts\nFROM contracts;\n```\n\n**Resultados:**\nSe encontraron 1 registros.\n",
+          "suggestions": [
+            "¿Cuántos contratos están activos?",
+            "Muéstrame los contratos por empresa",
+            "¿Cuál es el valor total de los contratos?"
+          ],
+          "is_ready": true,
+          "query_summary": "Consulta de agregación con sumas",
+          "conversation_id": "aa098947-1b4f-4d03-96b5-0762f1e693fc"
+        }
+      }
+    }
+  ],
+  "status": "partial_success",
+  "verification": "no_sql_generated",
+  "end_time": "2025-10-25T23:03:16.811618"
+}

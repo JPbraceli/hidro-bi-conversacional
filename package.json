@@ -1,0 +1,15 @@
+{
+  "name": "hidrochat",
+  "version": "1.0.0",
+  "description": "Asistente de consultas HIDRO",
+  "scripts": {
+    "dev": "echo Iniciando backend... && start cmd /k \"cd backend && python -m uvicorn app.main:app --reload --host 0.0.0.0 --port 8001\" && timeout /t 3 && echo Iniciando frontend... && start cmd /k \"cd frontend && npm run dev\"",
+    "dev-simple": "echo 'Abre 2 terminales y ejecuta:' && echo 'Terminal 1: npm run backend' && echo 'Terminal 2: npm run frontend'",
+    "backend": "cd backend && python -m uvicorn app.main:app --reload --host 0.0.0.0 --port 8001",
+    "frontend": "cd frontend && npm run dev",
+    "install-all": "npm run install-backend && npm run install-frontend",
+    "install-backend": "cd backend && pip install -r requirements-simple.txt",
+    "install-frontend": "cd frontend && npm install",
+    "test-connection": "cd backend && python ../test_connection.py"
+  }
+}

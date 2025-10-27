@@ -1,0 +1,278 @@
+2025-10-25 23:01:45,712 - INFO - STEP: FLOW_START
+2025-10-25 23:01:45,712 - DEBUG - DATA: {
+  "query": "\u00bfCu\u00e1ntas actividades hay?"
+}
+2025-10-25 23:01:45,713 - INFO - STEP: DATABASE_STATE_INITIAL
+2025-10-25 23:01:45,713 - DEBUG - DATA: {
+  "db_path": "hidro_data.db",
+  "db_exists": true
+}
+2025-10-25 23:01:45,714 - INFO - STEP: DATABASE_STATE_DETAILS
+2025-10-25 23:01:45,715 - DEBUG - DATA: {
+  "tables": [
+    "activities",
+    "profiles",
+    "contracts",
+    "gateways",
+    "admin_users"
+  ],
+  "table_counts": {
+    "activities": 5,
+    "profiles": 5,
+    "contracts": 3,
+    "gateways": 5,
+    "admin_users": 3
+  },
+  "activities_count": 5,
+  "total_value": 2850000.0,
+  "active_activities": 5
+}
+2025-10-25 23:01:45,715 - INFO - STEP: EXPECTED_RESULT
+2025-10-25 23:01:45,716 - DEBUG - DATA: {
+  "expected_sql": "SELECT COUNT(*) FROM activities",
+  "expected_result": 5,
+  "description": "Deber\u00eda retornar 5 actividades"
+}
+2025-10-25 23:01:45,716 - INFO - STEP: BACKEND_REQUEST_START
+2025-10-25 23:01:45,716 - DEBUG - DATA: {
+  "url": "http://localhost:8001/api/chat",
+  "method": "POST"
+}
+2025-10-25 23:01:45,716 - INFO - STEP: BACKEND_REQUEST_DATA
+2025-10-25 23:01:45,716 - DEBUG - DATA: {
+  "request_payload": {
+    "message": "\u00bfCu\u00e1ntas actividades hay?",
+    "conversation_history": []
+  }
+}
+2025-10-25 23:01:45,719 - DEBUG - Starting new HTTP connection (1): localhost:8001
+2025-10-25 23:01:49,699 - DEBUG - http://localhost:8001 "POST /api/chat HTTP/1.1" 200 378
+2025-10-25 23:01:49,700 - INFO - STEP: BACKEND_RESPONSE_RECEIVED
+2025-10-25 23:01:49,700 - DEBUG - DATA: {
+  "status_code": 200,
+  "response_time_ms": 3983.262777328491,
+  "response_size_bytes": 378
+}
+2025-10-25 23:01:49,700 - INFO - STEP: BACKEND_RESPONSE_SUCCESS
+2025-10-25 23:01:49,701 - DEBUG - DATA: {
+  "response_data": {
+    "response": "```sql\nSELECT COUNT(*) FROM activities;\n```\n\n**Resultados:**\nSe encontraron 1 registros.\n",
+    "suggestions": [
+      "\u00bfCu\u00e1ntas actividades est\u00e1n activas?",
+      "Mu\u00e9strame las actividades por estado",
+      "\u00bfCu\u00e1les son las actividades m\u00e1s recientes?"
+    ],
+    "is_ready": true,
+    "query_summary": "Consulta de conteo de registros",
+    "conversation_id": "d5b1d003-34bb-4b66-8d00-47ac56278ac9"
+  }
+}
+2025-10-25 23:01:49,702 - INFO - Tracking data saved to: query_tracking_20251025_230149.json
+2025-10-25 23:02:50,547 - INFO - STEP: FLOW_START
+2025-10-25 23:02:50,547 - DEBUG - DATA: {
+  "query": "\u00bfCu\u00e1ntas actividades hay?"
+}
+2025-10-25 23:02:50,547 - INFO - STEP: DATABASE_STATE_INITIAL
+2025-10-25 23:02:50,548 - DEBUG - DATA: {
+  "db_path": "hidro_data.db",
+  "db_exists": true
+}
+2025-10-25 23:02:50,549 - INFO - STEP: DATABASE_STATE_DETAILS
+2025-10-25 23:02:50,549 - DEBUG - DATA: {
+  "tables": [
+    "activities",
+    "profiles",
+    "contracts",
+    "gateways",
+    "admin_users"
+  ],
+  "table_counts": {
+    "activities": 5,
+    "profiles": 5,
+    "contracts": 3,
+    "gateways": 5,
+    "admin_users": 3
+  },
+  "activities_count": 5,
+  "total_value": 2850000.0,
+  "active_activities": 5
+}
+2025-10-25 23:02:50,550 - INFO - STEP: EXPECTED_RESULT
+2025-10-25 23:02:50,550 - DEBUG - DATA: {
+  "expected_sql": "SELECT COUNT(*) FROM activities",
+  "expected_result": 5,
+  "description": "Deber\u00eda retornar 5 actividades"
+}
+2025-10-25 23:02:50,550 - INFO - STEP: BACKEND_REQUEST_START
+2025-10-25 23:02:50,550 - DEBUG - DATA: {
+  "url": "http://localhost:8001/api/chat",
+  "method": "POST"
+}
+2025-10-25 23:02:50,550 - INFO - STEP: BACKEND_REQUEST_DATA
+2025-10-25 23:02:50,550 - DEBUG - DATA: {
+  "request_payload": {
+    "message": "\u00bfCu\u00e1ntas actividades hay?",
+    "conversation_history": []
+  }
+}
+2025-10-25 23:02:50,552 - DEBUG - Starting new HTTP connection (1): localhost:8001
+2025-10-25 23:02:53,479 - DEBUG - http://localhost:8001 "POST /api/chat HTTP/1.1" 200 365
+2025-10-25 23:02:53,479 - INFO - STEP: BACKEND_RESPONSE_RECEIVED
+2025-10-25 23:02:53,479 - DEBUG - DATA: {
+  "status_code": 200,
+  "response_time_ms": 2928.8692474365234,
+  "response_size_bytes": 365
+}
+2025-10-25 23:02:53,480 - INFO - STEP: BACKEND_RESPONSE_SUCCESS
+2025-10-25 23:02:53,480 - DEBUG - DATA: {
+  "response_data": {
+    "response": "SELECT COUNT(*) FROM activities;\n\n**Resultados:**\nSe encontraron 1 registros.\n",
+    "suggestions": [
+      "\u00bfCu\u00e1ntas actividades est\u00e1n activas?",
+      "Mu\u00e9strame las actividades por estado",
+      "\u00bfCu\u00e1les son las actividades m\u00e1s recientes?"
+    ],
+    "is_ready": true,
+    "query_summary": "Consulta de conteo de registros",
+    "conversation_id": "7f8f4454-361c-485f-9216-c3cf32b02660"
+  }
+}
+2025-10-25 23:02:53,481 - INFO - Tracking data saved to: query_tracking_20251025_230253.json
+2025-10-25 23:03:06,580 - INFO - STEP: FLOW_START
+2025-10-25 23:03:06,580 - DEBUG - DATA: {
+  "query": "\u00bfCu\u00e1l es el valor total de los contratos?"
+}
+2025-10-25 23:03:06,581 - INFO - STEP: DATABASE_STATE_INITIAL
+2025-10-25 23:03:06,581 - DEBUG - DATA: {
+  "db_path": "hidro_data.db",
+  "db_exists": true
+}
+2025-10-25 23:03:06,582 - INFO - STEP: DATABASE_STATE_DETAILS
+2025-10-25 23:03:06,583 - DEBUG - DATA: {
+  "tables": [
+    "activities",
+    "profiles",
+    "contracts",
+    "gateways",
+    "admin_users"
+  ],
+  "table_counts": {
+    "activities": 5,
+    "profiles": 5,
+    "contracts": 3,
+    "gateways": 5,
+    "admin_users": 3
+  },
+  "activities_count": 5,
+  "total_value": 2850000.0,
+  "active_activities": 5
+}
+2025-10-25 23:03:06,583 - INFO - STEP: EXPECTED_RESULT
+2025-10-25 23:03:06,583 - DEBUG - DATA: {
+  "expected_sql": "SELECT SUM(value) FROM contracts",
+  "expected_result": 15700000.0,
+  "description": "Deber\u00eda retornar $15,700,000"
+}
+2025-10-25 23:03:06,584 - INFO - STEP: BACKEND_REQUEST_START
+2025-10-25 23:03:06,584 - DEBUG - DATA: {
+  "url": "http://localhost:8001/api/chat",
+  "method": "POST"
+}
+2025-10-25 23:03:06,584 - INFO - STEP: BACKEND_REQUEST_DATA
+2025-10-25 23:03:06,584 - DEBUG - DATA: {
+  "request_payload": {
+    "message": "\u00bfCu\u00e1l es el valor total de los contratos?",
+    "conversation_history": []
+  }
+}
+2025-10-25 23:03:06,587 - DEBUG - Starting new HTTP connection (1): localhost:8001
+2025-10-25 23:03:16,809 - DEBUG - http://localhost:8001 "POST /api/chat HTTP/1.1" 200 561
+2025-10-25 23:03:16,810 - INFO - STEP: BACKEND_RESPONSE_RECEIVED
+2025-10-25 23:03:16,810 - DEBUG - DATA: {
+  "status_code": 200,
+  "response_time_ms": 10225.345849990845,
+  "response_size_bytes": 561
+}
+2025-10-25 23:03:16,810 - INFO - STEP: BACKEND_RESPONSE_SUCCESS
+2025-10-25 23:03:16,811 - DEBUG - DATA: {
+  "response_data": {
+    "response": "SELECT SUM(value) FROM contracts;\n\n```sql\n-- Query to calculate the sum of 'value' from all entries in 'contracts'. This will provide us with the total value.\n\nSELECT SUM(value) AS TotalValueFromContracts\nFROM contracts;\n```\n\n**Resultados:**\nSe encontraron 1 registros.\n",
+    "suggestions": [
+      "\u00bfCu\u00e1ntos contratos est\u00e1n activos?",
+      "Mu\u00e9strame los contratos por empresa",
+      "\u00bfCu\u00e1l es el valor total de los contratos?"
+    ],
+    "is_ready": true,
+    "query_summary": "Consulta de agregaci\u00f3n con sumas",
+    "conversation_id": "aa098947-1b4f-4d03-96b5-0762f1e693fc"
+  }
+}
+2025-10-25 23:03:16,812 - INFO - Tracking data saved to: query_tracking_20251025_230316.json
+2025-10-25 23:03:20,201 - INFO - STEP: FLOW_START
+2025-10-25 23:03:20,202 - DEBUG - DATA: {
+  "query": "Mu\u00e9strame los usuarios por rol"
+}
+2025-10-25 23:03:20,202 - INFO - STEP: DATABASE_STATE_INITIAL
+2025-10-25 23:03:20,202 - DEBUG - DATA: {
+  "db_path": "hidro_data.db",
+  "db_exists": true
+}
+2025-10-25 23:03:20,203 - INFO - STEP: DATABASE_STATE_DETAILS
+2025-10-25 23:03:20,203 - DEBUG - DATA: {
+  "tables": [
+    "activities",
+    "profiles",
+    "contracts",
+    "gateways",
+    "admin_users"
+  ],
+  "table_counts": {
+    "activities": 5,
+    "profiles": 5,
+    "contracts": 3,
+    "gateways": 5,
+    "admin_users": 3
+  },
+  "activities_count": 5,
+  "total_value": 2850000.0,
+  "active_activities": 5
+}
+2025-10-25 23:03:20,204 - INFO - STEP: EXPECTED_RESULT
+2025-10-25 23:03:20,204 - DEBUG - DATA: {
+  "message": "No hay resultado esperado definido para esta consulta"
+}
+2025-10-25 23:03:20,204 - INFO - STEP: BACKEND_REQUEST_START
+2025-10-25 23:03:20,205 - DEBUG - DATA: {
+  "url": "http://localhost:8001/api/chat",
+  "method": "POST"
+}
+2025-10-25 23:03:20,205 - INFO - STEP: BACKEND_REQUEST_DATA
+2025-10-25 23:03:20,205 - DEBUG - DATA: {
+  "request_payload": {
+    "message": "Mu\u00e9strame los usuarios por rol",
+    "conversation_history": []
+  }
+}
+2025-10-25 23:03:20,207 - DEBUG - Starting new HTTP connection (1): localhost:8001
+2025-10-25 23:03:31,382 - DEBUG - http://localhost:8001 "POST /api/chat HTTP/1.1" 200 634
+2025-10-25 23:03:31,382 - INFO - STEP: BACKEND_RESPONSE_RECEIVED
+2025-10-25 23:03:31,382 - DEBUG - DATA: {
+  "status_code": 200,
+  "response_time_ms": 11176.955223083496,
+  "response_size_bytes": 634
+}
+2025-10-25 23:03:31,383 - INFO - STEP: BACKEND_RESPONSE_SUCCESS
+2025-10-25 23:03:31,383 - DEBUG - DATA: {
+  "response_data": {
+    "response": "SELECT role, COUNT(*) FROM PROFILES GROUP BY role;\n\nExecutable SQL Query: SELECT role, COUNT(*) FROM PROFILES GROUP BY role;\nResult visualization format (e.g., in Power BI or a similar tool): A bar chart displaying the count of users for each distinct role within the profiles table would be appropriate here.\n\n**Resultados:**\nSe encontraron 5 registros.\n",
+    "suggestions": [
+      "\u00bfCu\u00e1ntos usuarios hay registrados?",
+      "Mu\u00e9strame los perfiles por rol",
+      "\u00bfCu\u00e1les son los usuarios m\u00e1s recientes?"
+    ],
+    "is_ready": true,
+    "query_summary": "Consulta de conteo de registros",
+    "conversation_id": "a5511720-3c65-4f97-97e4-f4474d740430"
+  }
+}
+2025-10-25 23:03:31,384 - INFO - Tracking data saved to: query_tracking_20251025_230331.json

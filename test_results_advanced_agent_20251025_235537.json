@@ -1,0 +1,45 @@
+{
+  "timestamp": "20251025_235537",
+  "summary": {
+    "total_tests": 5,
+    "passed": 5,
+    "success_rate": "100.0%"
+  },
+  "results": [
+    {
+      "test": "1. Exploración inicial",
+      "status": "PASS",
+      "response_time": 4.164036,
+      "suggestions_count": 0,
+      "is_ready": false
+    },
+    {
+      "test": "2. Análisis de actividades",
+      "status": "PASS",
+      "response_time": 4.146037,
+      "suggestions_count": 0,
+      "is_ready": false
+    },
+    {
+      "test": "3. Análisis de contratos",
+      "status": "PASS",
+      "response_time": 4.141092,
+      "suggestions_count": 0,
+      "is_ready": false
+    },
+    {
+      "test": "4. Análisis cruzado",
+      "status": "PASS",
+      "response_time": 4.111748,
+      "suggestions_count": 0,
+      "is_ready": false
+    },
+    {
+      "test": "5. Sugerencias inteligentes",
+      "status": "PASS",
+      "response_time": 4.121825,
+      "suggestions_count": 0,
+      "is_ready": false
+    }
+  ]
+}

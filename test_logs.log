@@ -1,0 +1,30 @@
+2025-10-25 23:00:37,581 - INFO -     Iniciando pruebas completas
+2025-10-25 23:00:37,584 - INFO -     Probando: '¿Cuántas actividades hay?'
+2025-10-25 23:00:37,586 - INFO -     Iniciando prueba completa con: '¿Cuántas actividades hay?'
+2025-10-25 23:00:37,588 - INFO -     Verificando conexión SQLite
+2025-10-25 23:00:37,592 - INFO -     Verificando API endpoints
+2025-10-25 23:00:43,742 - INFO -     Mensaje: '¿Cuántas actividades hay?'
+2025-10-25 23:01:00,792 - INFO -     Error en: chat
+2025-10-25 23:01:00,794 - INFO -     Probando: '¿Cuántas actividades están activas?'
+2025-10-25 23:01:00,797 - INFO -     Iniciando prueba completa con: '¿Cuántas actividades están activas?'
+2025-10-25 23:01:00,801 - INFO -     Verificando conexión SQLite
+2025-10-25 23:01:00,805 - INFO -     Verificando API endpoints
+2025-10-25 23:01:07,841 - INFO -     Error en: backend
+2025-10-25 23:01:07,844 - INFO -     Probando: '¿Cuál es el valor total de los contratos?'
+2025-10-25 23:01:07,846 - INFO -     Iniciando prueba completa con: '¿Cuál es el valor total de los contratos?'
+2025-10-25 23:01:07,849 - INFO -     Verificando conexión SQLite
+2025-10-25 23:01:07,855 - INFO -     Verificando API endpoints
+2025-10-25 23:01:14,899 - INFO -     Error en: backend
+2025-10-25 23:01:14,902 - INFO -     Probando: '¿Cuántos usuarios hay por rol?'
+2025-10-25 23:01:14,904 - INFO -     Iniciando prueba completa con: '¿Cuántos usuarios hay por rol?'
+2025-10-25 23:01:14,907 - INFO -     Verificando conexión SQLite
+2025-10-25 23:01:14,912 - INFO -     Verificando API endpoints
+2025-10-25 23:01:21,948 - INFO -     Error en: backend
+2025-10-25 23:01:21,951 - INFO -     Probando: 'Muéstrame los gateways activos'
+2025-10-25 23:01:21,954 - INFO -     Iniciando prueba completa con: 'Muéstrame los gateways activos'
+2025-10-25 23:01:21,956 - INFO -     Verificando conexión SQLite
+2025-10-25 23:01:21,960 - INFO -     Verificando API endpoints
+2025-10-25 23:01:30,562 - INFO -     Mensaje: 'Muéstrame los gateways activos'
+2025-10-25 23:01:41,218 - INFO -     Mensaje: 'Muéstrame los gateways activos'
+2025-10-25 23:01:41,221 - INFO -     Total: 5, Passed: 1, Failed: 4
+2025-10-25 23:01:41,223 - INFO -     test_results.json y test_logs.log
